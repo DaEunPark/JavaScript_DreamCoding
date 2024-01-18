@@ -3,7 +3,7 @@
 // use this for Vanila Javascript
 'use strict';
 
-// 2. Variable - 변수
+// 2. Variable - 변수, rw (read/write)
 // let (added in ES6)
 let globalName = 'global name';
 {
@@ -25,13 +25,19 @@ var age;
 }
 console.log(age)
 
-// 3. Constants
+// 3. Constant, r (read only)
+// use const whenever possible.
+// only use let if variable needs to change.
 // favor immutable data type always for a few reasons;
 // - security 보안상의 이유 - 외부에서 값 변경하지 못 하도록
 // - thread safety - 쓰레드가 변수에 접근해서 변경하지 못 하도록
 // - reduce human mistakes - 실수 방지
 const daysInWeek = 7;
 const maxNumber = 5;
+
+// Note!
+// Immutable data types: primitive types, frozen objects (i.e. object.freeze())
+// Mutable data types: all objects by default are mutable in JS
 
 // 4. Variable types
 // primitive, single item: number, string, boolean, null, undefined, symbol
