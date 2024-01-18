@@ -32,10 +32,7 @@ console.log(age)
 // - reduce human mistakes - 실수 방지
 const daysInWeek = 7;
 const maxNumber = 5;
-showValueTypeOf(helloBob)
-function showValueTypeOf(val) {
-    console.log(`value: ${val}, type: ${typeof val}`)
-}
+
 // 4. Variable types
 // primitive, single item: number, string, boolean, null, undefined, symbol
 // object, box container
@@ -58,6 +55,9 @@ const bigInt = 12312098871298471903389837182943769384329014129812223123412897129
 console.log(`value: ${bigInt}, type: ${typeof bigInt}`) // value: 1231209887129847190338983718294376938432901412981222312341289712987, type: bigint
 console.log(Number.MAX_SAFE_INTEGER)
 
+function showValueTypeOf(val) {
+    console.log(`value: ${val}, type: ${typeof val}`)
+}
 
 // string
 const char = 'c';
@@ -65,6 +65,7 @@ const brendan = 'brendan';
 const greeting = 'hello ' + brendan;
 showValueTypeOf(greeting);
 const helloBob = `hi ${brendan}`;   // template literals  (string)
+showValueTypeOf(helloBob)
 
 
 // boolean
