@@ -176,7 +176,8 @@ const calculate = (command, a, b) => {
         result = 'a or b is not a number';
         return result;
     }
-    
+    // 정해진 데이터를 비교할 때는 if문보다 switch문이 좋다.
+    // break 대신에 바로 return
     switch (command) {
         case 'add':
             result = `${a} + ${b} = ${a + b}`;
@@ -196,6 +197,7 @@ const calculate = (command, a, b) => {
             else result = `${a} % ${b} = ${a % b}`;
             break;
         default:
+            // throw Error('wrong command') 할 수도
             result = 'wrong command';
             break;
     }
