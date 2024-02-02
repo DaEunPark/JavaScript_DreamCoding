@@ -48,7 +48,16 @@ const id = prompt('enter your id');
 const pw = prompt('enter your password');
 
 const userStorage = new UserStorage();
-userStorage.loginUser(id, pw)
-    .then(userStorage.getRoles)
-    .then(user => alert(`hello ${user.name}, you have a ${user.role} role`))
-    .catch(console.log);
+// userStorage.loginUser(id, pw)
+//     .then(userStorage.getRoles)
+//     .then(user => alert(`hello ${user.name}, you have a ${user.role} role`))
+//     .catch(console.log);
+
+// async await 사용해서 해소해보기
+async function getUserInfo() {
+    const login = await userStorage.loginUser(id, pw);
+    const role = await userStorage.getRoles(login);
+    return `hello ${role.name}, you have a ${role.role} role`;
+}
+
+getUserInfo().then(alert);
